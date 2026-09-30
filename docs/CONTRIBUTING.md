@@ -33,6 +33,11 @@ We use [pytest](https://docs.pytest.org/en/latest/) for running unit tests. All 
 python -m pytest --showlocals -s -vv -n=auto --ignore=tests/models/test_openvino.py
 ```
 
+For the small CPU score and results-table regression suite, run
+`python -m pytest tests/test_cpu_regression.py -v`. See the
+[reference documentation](../tests/testdata/cpu_regression/README.md) for its
+configuration and instructions for reviewing intentional baseline updates.
+
 ## Verbose logging
 
 You can enable verbose logging with the environment variable `LMEVAL_LOG_LEVEL="debug"`.

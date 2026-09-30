@@ -1,0 +1,102 @@
+{
+  "evaluation": {
+    "model": "hf",
+    "model_args": {
+      "pretrained": "EleutherAI/pythia-14m-deduped",
+      "revision": "7386d9a4ae45aef494a6e704910394def3037fc5",
+      "dtype": "float32"
+    },
+    "tasks": [
+      "arc_easy",
+      "arc_challenge",
+      "lambada_openai",
+      "wikitext",
+      "mmlu_abstract_algebra"
+    ],
+    "device": "cpu",
+    "batch_size": 1,
+    "num_fewshot": 0,
+    "limit": 10,
+    "bootstrap_iters": 0,
+    "log_samples": false,
+    "random_seed": 0,
+    "numpy_random_seed": 0,
+    "torch_random_seed": 0,
+    "fewshot_random_seed": 0
+  },
+  "dependencies": {
+    "torch": "2.14.1+cpu",
+    "transformers": "5.18.0",
+    "datasets": "2.19.1",
+    "pytablewriter": "1.2.1"
+  },
+  "results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 10,
+      "acc,none": 0.3,
+      "acc_stderr,none": "N/A",
+      "acc_norm,none": 0.1,
+      "acc_norm_stderr,none": "N/A"
+    },
+    "arc_challenge": {
+      "name": "arc_challenge",
+      "alias": "arc_challenge",
+      "sample_len": 10,
+      "acc,none": 0.0,
+      "acc_stderr,none": "N/A",
+      "acc_norm,none": 0.0,
+      "acc_norm_stderr,none": "N/A"
+    },
+    "lambada_openai": {
+      "name": "lambada_openai",
+      "alias": "lambada_openai",
+      "sample_len": 10,
+      "perplexity,none": 605.5896156111902,
+      "perplexity_stderr,none": "N/A",
+      "acc,none": 0.1,
+      "acc_stderr,none": "N/A"
+    },
+    "wikitext": {
+      "name": "wikitext",
+      "alias": "wikitext",
+      "sample_len": 10,
+      "word_perplexity,none": 130.4813590639406,
+      "word_perplexity_stderr,none": "N/A",
+      "byte_perplexity,none": 2.530401076099876,
+      "byte_perplexity_stderr,none": "N/A",
+      "bits_per_byte,none": 1.3393660745008342,
+      "bits_per_byte_stderr,none": "N/A"
+    },
+    "mmlu_abstract_algebra": {
+      "name": "mmlu_abstract_algebra",
+      "alias": "abstract_algebra",
+      "sample_len": 10,
+      "acc,none": 0.2,
+      "acc_stderr,none": "N/A"
+    },
+    "mmlu_regression": {
+      "alias": "MMLU (subset)",
+      "name": "mmlu_regression",
+      "sample_len": 10,
+      "acc,none": 0.2,
+      "acc_stderr,none": "N/A",
+      "sample_count": {
+        "acc,none": 10
+      }
+    }
+  },
+  "groups": {
+    "mmlu_regression": {
+      "alias": "MMLU (subset)",
+      "name": "mmlu_regression",
+      "sample_len": 10,
+      "acc,none": 0.2,
+      "acc_stderr,none": "N/A",
+      "sample_count": {
+        "acc,none": 10
+      }
+    }
+  }
+}
